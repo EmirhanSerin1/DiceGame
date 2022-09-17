@@ -37,8 +37,8 @@ class ViewController: UIViewController {
             UIImage(named: "DiceSix"),
         ]
         
-        image1.image = leftImageList[Int.random(in: 0...5)]
-        image2.image = rightImageList[Int.random(in: 0...5)]
+        image1.image = leftImageList.randomElement() as! UIImage
+        image2.image = rightImageList.randomElement() as! UIImage
         
     }
     
