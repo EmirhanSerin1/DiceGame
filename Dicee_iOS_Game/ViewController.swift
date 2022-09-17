@@ -8,12 +8,39 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func button(_ sender: Any) {
+        
+        let leftImageList = [
+            UIImage(named: "DiceOne"),
+            UIImage(named: "DiceTwo"),
+            UIImage(named: "DiceThree"),
+            UIImage(named: "DiceFour"),
+            UIImage(named: "DiceFive"),
+            UIImage(named: "DiceSix"),
+        ]
+        
+        let rightImageList = [
+            UIImage(named: "DiceOne"),
+            UIImage(named: "DiceTwo"),
+            UIImage(named: "DiceThree"),
+            UIImage(named: "DiceFour"),
+            UIImage(named: "DiceFive"),
+            UIImage(named: "DiceSix"),
+        ]
+        
+        image1.image = leftImageList[Int.random(in: 0...5)]
+        image2.image = rightImageList[Int.random(in: 0...5)]
+        
+    }
+    
 }
 
